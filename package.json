@@ -1,0 +1,43 @@
+{
+  "name": "@ggoodman/typed-validator",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A typed object representing a validation function",
+  "exports": {
+    ".": {
+      "script": null,
+      "default": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "build": "distilt",
+    "prepack": "npm run build",
+    "posttest": "kacl lint",
+    "preversion": "kacl prerelease",
+    "version": "kacl release && git add CHANGELOG.md",
+    "postversion": "git push && gh-release",
+    "test": "echo ✅ WIP"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ggoodman/typed-validator.git"
+  },
+  "keywords": [],
+  "author": "Geoff Goodman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ggoodman/typed-validator/issues"
+  },
+  "homepage": "https://github.com/ggoodman/typed-validator#readme",
+  "volta": {
+    "node": "14.19.1",
+    "npm": "8.7.0"
+  },
+  "devDependencies": {
+    "distilt": "^0.16.8",
+    "gh-release": "^6.0.4",
+    "kacl": "^1.1.1",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.3"
+  }
+}

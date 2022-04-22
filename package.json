@@ -9,6 +9,9 @@
       "default": "./src/index.ts"
     }
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "distilt",
     "prepack": "npm run build",
